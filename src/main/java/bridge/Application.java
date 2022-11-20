@@ -1,8 +1,13 @@
 package bridge;
 
+import bridge.custom.BridgeConsole;
+import bridge.custom.BridgeGameRunner;
+
 public class Application {
 
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        BridgeGameRunner bridgeGameRunner = new BridgeGameRunner(new InputView(new BridgeConsole()),
+            new OutputView());
+        bridgeGameRunner.run();
     }
 }
